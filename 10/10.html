@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		width: 1000px;	
+		padding: 0;
+	    margin: 10px auto ;
+	}
+	.clearfix::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+ 	header{
+ 		border: 1px solid #f00;
+ 		height: 100px;
+ 	}
+ 	aside{
+ 		border: 1px solid #0f0;
+ 		height: 300px;
+ 		width: 150px;
+ 		float: left;
+ 		margin: 2px 0px;
+ 	}
+ 	main{
+ 		border: 1px solid #00f;
+ 		height: 300px;
+ 		width: 1000px;
+ 		float: right;
+ 		margin: 2px 0px 2px 4px ;
+ 	}
+ 	footer{
+ 		border: 1px solid #555545;
+ 		height: 100px;
+ 		width: auto;
+ 	}
+	</style>
+</head>
+<body>
+	<header>header</header>
+	<section  class="clearfix">
+		<aside>aside</aside>
+
+		<main>main</main>
+	</section>
+	<footer>footer</footer>
+</body>
+</html>
