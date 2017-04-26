@@ -1,0 +1,67 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+.menu{
+	background: orange;
+	height: 48px;
+	text-align: center;
+	box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+.menu ul{
+	list-style-type: none;
+	margin: auto;
+}
+.menu ul li{
+	display: inline-block;
+	list-style-type: none;
+	position: relative;
+	background: orange;
+}
+
+.menu ul li a{
+	text-decoration: none;
+	text-align: left;
+	text-indent: 20px;
+	color: rgb(0,0,0);
+	display: inline-block;
+	width: 160px;
+	height:48px;
+	border-right: 1px solid rgba(0,0,0,.4);
+	line-height: 48px;
+	transition: text-indent .6s;
+	position: relative;
+	z-index: 1;
+}
+.menu ul li:last-child a{
+	border-left: 1px solid rgba(0,0,0,.4);
+}
+.menu ul li a:hover {
+	color: #fff;
+	text-indent: 50px;
+}
+.menu li::before{
+	content: "";
+	position: absolute;
+	top: 10%;
+	left: 20px;
+	width: 24px;
+	height: 24px;
+	color: black;
+	transform: scale(0);
+	transition: all .6s;
+}
+.menu ul li a::after{
+	content: "";
+	position: absolute;
+	left:10%;
+	right: 10%;
+	top: 20%;
+	bottom: 0;
+	border-radius:100% ;
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0);
+	z-index: -1;
+}
+.menu ul li a::after{
+	box-shadow: 0px 2px 4px 1px rgba(0,0,0,0);
+}
