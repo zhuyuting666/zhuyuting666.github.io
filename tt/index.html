@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		    .clearfix::after{
+		    	content: "";
+		    	display: block;
+		    	clear: both;
+		    }     
+			input{
+				display: none;
+			}
+			label {
+				display: inline-block;
+				width: 60px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				cursor: pointer;
+				transition: background .5s;
+			}
+			
+			#contents {
+				width: 700px;
+				height: 480px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			#contents #conList {
+				width: 2100px;
+				height: 480px;
+				position: absolute;
+				transition: left .5s;
+			}
+			
+			#contents #conList div {
+				float: left;
+				width: 700px;
+				height: 480px;
+			}
+			
+			#contents #conList div#con1 {
+				background-color: lightgray;
+			}
+			
+			#contents #conList div#con2 {
+				background-color: lightblue;
+			}
+			
+			#contents #conList div#con3 {
+				background-color: pink;
+			}
+			
+			#tab1:checked~#label1 {
+				background-color: lightgray;
+			}
+			
+			#tab2:checked~#label2 {
+				background-color: lightblue;
+			}
+			
+			#tab3:checked~#label3 {
+				background-color: pink;
+			}
+			
+			#tab1:checked~#contents #conList {
+				left: 0;
+			}
+			
+			#tab2:checked~#contents #conList {
+				left: -700px;
+			}
+			
+			#tab3:checked~#contents #conList {
+				left: -1400px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="radio" checked="checked" name="tabs" id="tab1" />
+		<input type="radio" name="tabs" id="tab2" />
+		<input type="radio" name="tabs" id="tab3" />
+		<label for="tab1">新闻</label>
+		<label for="tab2">通知</label>
+		<label for="tab3">公告</label>
+		<div id="contents">
+		    <div id="conList" class="clearfix">
+			    <div id="con1">内容1</div>
+		        <div id="con2">内容2</div>
+		        <div id="con3">内容3</div>
+		   </div>
+	</div>
+		
+		
+	</body>
+</html>
