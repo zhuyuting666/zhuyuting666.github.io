@@ -1,0 +1,26 @@
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+ul{
+	list-style: none;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+header{
+	position: fixed;
+	
+}
+.logo img{
+	float: left;
+}
+.banner{
+	background: url(../img/banner.jpg);
+}
