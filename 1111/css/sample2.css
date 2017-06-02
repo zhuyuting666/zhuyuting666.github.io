@@ -1,0 +1,104 @@
+*{
+	box-sizing: border-box;
+}
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+ul{
+	list-style: none;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+input{
+	border: none;
+	outline: none;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+	padding: 1px;
+}
+body{
+	max-height: 1400px;
+	font-family: "微软雅黑",simhei;
+}
+header .container{
+	position: relative;
+	max-width: 1200px;
+	margin: auto;
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 0px;
+	background-color:rgba(0,0,0,0);
+	transition: background-color .5s,padding .5s;
+	z-index: 999;
+}
+header.on{
+	padding: 5px 0px;
+	background-color:rgba(0,0,0,.8);
+}
+header .topMenu a{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+header .topMenu a:hover{
+	color: #339BEB;
+}
+header .logo{
+	float: left;
+}
+header .logo span,
+header .logo img{
+	vertical-align: middle;
+}
+header .logo span{
+	font-size: 3em;
+	font-family: 'Dancing Script', cursive;
+}
+header .topMenu{
+	float: right;
+	margin-top: 5px;
+}
+header .topMenu ul li{
+	float: left;
+	margin: 0px 30px;
+}
+
+.banner{
+	background: url(../img/banner.jpg) no-repeat center top;
+	min-height: 600px;
+	color: #fff;
+	line-height: 1.5;
+}
+.banner .container{
+	width: 800px;
+	height: 180px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+.banner .container h1{
+	text-align: center;
+}
+.banner .container h1 strong{
+	color: #339BEB;
+}.banner .container p strong{
+	background-color:rgba(255,255,255,.5);
+	color:#000;
+	padding: 3px;
+	font-weight: normal;
+	
+}
