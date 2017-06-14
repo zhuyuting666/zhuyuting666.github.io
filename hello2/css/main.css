@@ -1,0 +1,89 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}   
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+ul{
+	list-style: none;
+}
+li{
+	float: left;
+	display: block;
+}
+a{
+	text-decoration: none;
+}
+header{
+	width: 1000px;
+    height: 70px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+	margin: auto;
+	position: relative
+	
+}
+
+header .img{
+	position: absolute;
+	
+	left:0;
+}
+header .menu{
+	position: absolute;
+	right: 0;
+}
+header .menu li{
+	width: 100px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	border-left: 1px solid #EEE;
+}
+header .menu li a{
+	cursor: pointer;
+	color: #333;
+}
+header .menu  li:nth-child(5){
+	border-right: 1px solid #EEE;
+}
+header .menu li a:first-child{
+	color: lightblue;
+}
+header .menu li a:hover{
+	color: lightblue;
+	text-decoration: none;
+}
+
+header .menu .move{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	background: lightblue;
+	transition: all .5s; 
+}
+header .menu li:nth-child(2):hover ~li.move{
+	left: 100px;
+	
+}
+header .menu li:nth-child(3):hover ~li.move{
+	left: 200px;
+	
+}
+header .menu li:nth-child(4):hover ~li.move{
+	left: 300px;
+	
+}
+header .menu li:nth-child(5):hover ~li.move{
+	left: 400px;
+}
+.banner{
+	background: url(../img/banner2.jpg);
+}
