@@ -1,0 +1,102 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+ul{
+	list-style-type: none;
+}
+li{
+	float: left;
+	
+}	
+a{
+	text-decoration: none;
+}
+header{
+	width: 1200px;
+	height: 70px;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	position: relative;
+}
+header .img{
+	position: absolute;
+	left: 0;
+}
+header .left{
+	position: absolute;
+	right: 0;
+}
+header ul li{
+	width: 100px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	border-left: 1px solid rgba(225,225,225,.6);
+}
+
+header ul li:nth-child(5){
+	border-right: 1px solid rgba(225,225,225,.6);
+}
+header ul .move{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100px;
+	height: 3px;
+	background-color: lightblue;
+	transition: all .5s;
+}
+header ul li:nth-child(2):hover ~ li.move{
+	left: 100px;
+}
+header ul li:nth-child(3):hover ~ li.move{
+	left: 200px;
+}
+header ul li:nth-child(4):hover ~ li.move{
+	left: 300px;
+}
+header ul li:nth-child(5):hover ~ li.move{
+	left: 400px;
+}
+.banner{
+	height: 454px;
+	color: #ddd;
+	background: url(../img/banner2.jpg)  center top no-repeat;
+	background-size: 100%;
+}
+.banner .center{
+   padding: 70px 0 0 515px;
+
+}
+.banner h2.title {
+	margin-bottom: 80px;
+	font-weight: normal;
+	font-size:24px;
+}
+.banner a.download{
+	display: block;
+	width: 243px;
+    height: 76px;
+    background: url(../images/download.png) no-repeat;
+}
+.banner a.download:hover{
+	background-position: 0 -152px;
+}
+.banner a{
+	color: #fff;
+}
+.banner a:hover{
+	text-decoration: underline;
+}
+
+
