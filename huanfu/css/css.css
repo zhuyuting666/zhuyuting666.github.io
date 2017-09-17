@@ -1,0 +1,11 @@
+body{
+	background: url(../img/1.jpg) center repeat;
+	color: lightblue;
+}
+h1{
+	text-align: center;
+}
+a{
+	text-decoration: none;
+	color: pink;
+}
