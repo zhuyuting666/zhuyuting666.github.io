@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	<style type="text/css">
+	body{
+	      background: url(img/2.jpg) center;
+	}
+	div{
+				margin-top: 250px;
+				text-align: center;
+			}
+	#textstar{
+				width: 100px;
+			}
+	#textend{
+				width: 250px;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>抽奖</h1>
+			<input type="text" name="" id="textstar" value="" />
+			<input type="button" name="" id="btnstar" value="开始" onclick="star()" />
+			<input type="button" name="" id="btnend" value="结束" onclick="stop()"/><br />
+			<input type="text" name="" id="textend" value="" />
+		</div>
+		<script type="text/javascript">
+			var textstar=document.getElementById("textstar");
+			var btnstar=document.getElementById("btnstar");
+			var btnend=document.getElementById("btnend");
+			var textend=document.getElementById("textend");
+			var a;
+			var strs="姚宇飞#朱学成#岑灏#朱晨煜#宋治民#潘雪#钱伟杰#姜凯#陆文涛#朱雨婷#吕涵之#沈丹青#钱都#杜任杰#叶信哲#蒋轶聪#张虓敏#陈黎铭#何桂清#余银超#劳锦锞#周渠成#徐炜昊#盛绍斌#王海波#郑涛#郑可琪#潘云锋#陈汇#蔡浩然#冯盛鹏#张南#黄小翠#曾思思#李雄俊#苏彬彬#黄鑫鑫#姜智孟#白炳钿#胡利明#张益桐#许桃美";
+			var str=strs.split("#");
+			var arrResult;
+			var num;
+			function luck () {
+				str=strs.split("#");
+				var num=Number(textstar.value);
+				var arrResult=new Array();
+				if(num==0||isNaN(num)){
+					num=3;
+				}
+				for(var i=0;i<num;i++){
+					var index=parseInt(Math.random()*str.length);
+					arrResult.push(str[index]);
+					arrResult.splice(index,1);
+				}
+				textend.value=arrResult.join(",");
+			}
+			function star () {
+				a=setInterval("luck()",100);
+
+			}
+			function stop () {
+				window.clearInterval(a);
+
+			}
+		</script>
+
+		
+	</body>
+</html>
